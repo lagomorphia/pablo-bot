@@ -16,29 +16,21 @@ CONSUMER_SECRET = os.environ.get('CONSUMER_SECRET')
 ACCESS_KEY = os.environ.get('ACCESS_KEY')
 ACCESS_SECRET = os.environ.get('ACCESS_SECRET')
 
-sys.stdout.write('19')
-
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 api = tweepy.API(auth)
-
-sys.stdout.write('26')
 
 user = api.me()
 print(user.name)
 print(user.description)
 print(user.location)
 
-sys.stdout.write('33')
-
 try:
     api.verify_credentials()
     print("Authentication OK")
 except:
     print("Error during authentication")
-
-sys.stdout.write('41')
 
 theleftcanwin = "theleftcanwin.txt"
 filename=open(theleftcanwin,'r', errors='replace')
