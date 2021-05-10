@@ -1,5 +1,6 @@
 import tweepy, time, sys
 import os
+from os import environ
 
 #consumer_key = os.getenv("CONSUMER_KEY")
 #consumer_secret = os.getenv("CONSUMER_SECRET")
