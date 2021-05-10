@@ -14,10 +14,10 @@ from os import environ
 CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_TOKEN = environ['ACCESS_TOKEN']
-ACCESS_SECRET = environ['ACCESS_SECRET']
+ACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth)
 
